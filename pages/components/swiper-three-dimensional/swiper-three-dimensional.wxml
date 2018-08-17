@@ -1,0 +1,3 @@
+<view class="swiper-three-dimensional" bindtouchstart="touchstart" bindtouchend="touchend">
+	<view class="swiper-item {{swiperClass[index]}}" wx:for="{{listData}}" wx:key="listData">{{index}}</view>
+</view>

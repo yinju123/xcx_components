@@ -1,0 +1,13 @@
+<view class="mySwiper" >
+	<swiper style="height:{{styleData.swiperHeight}}rpx" current="{{activeIndex}}" bindchange="swiperChange">
+		<swiper-item class="swiper-item" wx:for="{{listData}}" wx:key="listData">
+			<navigator url="{{item.url}}" class="swiper-item-navigator">
+				<image mode="widthFix" src="{{item.imgSrc}}" class="swiper-item-img"></image>
+			</navigator>
+		</swiper-item>
+	</swiper>
+	
+	<view class="indicator-dots">
+		<view wx:for="{{listData}}" wx:key="dots" class="dots {{activeIndex==index?'active':''}}" bindtap="toDots" data-index="{{index}}" ></view>
+	</view>
+</view>

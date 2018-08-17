@@ -1,0 +1,69 @@
+<view class="index container" style="min-height:{{height}}px">
+	<view class="top-nav-wrap">
+		<top-nav></top-nav>
+	</view>
+	
+	
+	<view class="template-item">
+		<view class=".template-item-title">图片文字导航</view>
+		<view class="desc">这是图片与文字的导航。一般是在页面的上部分。但底部的导航栏也是这样的模式。底部导航栏的中间的哪一样可能会没文字，且图片较其他的大。这事就用margin调整图片的位置</view>
+		<img-nav></img-nav>
+	</view>
+	<view class="template-item">
+		<view class="template-item-title">文字导航</view>
+		<view class="desc">在topNav中有默认的情况，不传数据。就是使用默认的。当与默认的不一致时，在传数据。数据有三种。1、listData 导航的文字及导航的地址。2、styleData 导航的样式。 3、activeIndex 当前是哪一样页面 4、type 使用哪种类型的导航栏</view>
+		<top-nav type="{{type2}}" bindget_nav_index="get_nav_index" styleData="{{styleData2}}" listData="{{listData2}}"></top-nav>
+	</view>
+	
+	<view class="template-item">
+		<view class="template-item-title">轮播图</view>
+		<my-swiper></my-swiper>
+	</view>
+	
+	<view class="template-item">
+		<view class="footer-wrap">
+			<img-nav styleData="{{styleData}}" listData="{{listData}}"></img-nav>
+		</view>
+	</view>
+	
+	
+	<view class="template-item">
+		<view class=".template-item-title">获取当前位置信息</view>
+		<view class="location-item">国家：{{location.nation}}</view>
+		<view class="location-item">省份：{{location.province}}</view>
+		<view class="location-item">城市：{{location.city}}</view>
+		<view class="location-item">区：{{location.district}}</view>
+	</view>
+	
+	<view class="template-item">
+		<view class="template-item-title">card-horizontal</view>
+		<view class="desc">
+		
+		</view>
+		<view class="card-wrap">
+			<card-horizontal>
+				<!--<image slot="img" src="/utils/img/card-horizontal/1.jpg" class="card-img" mode="widthFix"></image>-->
+				<!--<view class="name" slot="card-content">yinju</view>-->
+				<!--<view class="native-place" slot="card-content">江西景德镇人1111111111111111111111111111222222222</view>-->
+			</card-horizontal>
+		</view>
+	</view>
+	
+	
+	
+	<view class="template-item">
+		<view class="template-item-title">滑动删除</view>
+		<view class="desc">
+			scroll-view有relative属性，宽度是100%。B宽度也是100%。C标签是绝对定位。但是也能起到滑动的作用。绝对定位是脱离文档流的.
+			不过这样的情况只有是绝对定位在右边才行。绝对定位在左边不行
+		</view>
+		<scroll-view class="scroll-view" scroll-x>
+			<view class="b">B</view>
+			<view class="c">C</view>
+		</scroll-view>
+	</view>
+	
+	
+	
+	
+</view>

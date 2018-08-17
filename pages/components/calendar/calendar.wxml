@@ -1,0 +1,17 @@
+<view class="calendar">
+	<view class="last-next align-items">
+		<image src="/utils/img/calendar/last.png" bindtap="changeMonth" data-index="0"></image>
+		<view class="year-month">{{y}}年{{m}}月</view>
+		<image src="/utils/img/calendar/next.png" bindtap="changeMonth" data-index="1"></image>
+	</view>
+	
+	
+	<view class="week clear">
+		<view class="week-item {{((index+1)%7==0||(index+1)%7==1)?'gray':''}}" wx:for="{{week}}" wx:key="week">{{item}}</view>
+	</view>
+	<view class="days clear">
+		<view class="days-item" wx:for="{{days}}" wx:key="days" bindtap="selectDay" data-index="{{index}}">
+			<view class="days-item-content {{activeIndex==index?'active':''}} {{((index+1)%7==0||(index+1)%7==1)?'gray':''}}">{{item}}</view>
+		</view>
+	</view>
+</view>

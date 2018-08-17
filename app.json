@@ -1,0 +1,11 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/second/second",
+        "pages/three/three"
+    ],
+    "window": {
+        "navigationBarTitleText": "小程序测试",
+        "navigationBarBackgroundColor":"#66B83D"
+    }
+}

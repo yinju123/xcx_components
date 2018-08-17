@@ -1,0 +1,13 @@
+<view class="good-list clear">
+	<import src="/utils/template.wxml"/>
+	<view class="list-row" style="float:left;width:{{width}}">
+		<template is="good-list-item"></template>
+		<template is="good-list-item-short"></template>
+	</view>
+	
+	<view class="list-row" style="float:right;width:{{width}}">
+		<template is="good-list-item-short"></template>
+	</view>
+</view>
+
+

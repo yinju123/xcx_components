@@ -1,0 +1,27 @@
+<view class="second container" style="min-height:{{height}}px">
+	<view class="top-nav-wrap">
+		<top-nav activeIndex="{{topNavActiveIndex}}"></top-nav>
+	</view>
+	
+	<swiper-three-dimensional a="{{a}}"></swiper-three-dimensional>
+	
+	<view class="template-item">
+		<view class="template-item-title">图片文字导航</view>
+		<view class="desc">每一项的具体样式，写在wxss中，view从模板中获取。因为一帮就分左两块。为了模板统一。请求的数据分为左右两组数据。要传入的数据是width，每张卡片的宽度</view>
+		<view class="goods-list-wrap">
+			<goods-list></goods-list>
+		</view>
+	</view>
+	
+	
+	<view class="template-item">
+		<view class="template-item-title">日历</view>
+		<view class="desc">
+			如果传入date（时间,字符串，例如：2018-02），就是显示这个月的时间。如果没传就是本月的时间。点击可以选择时间，并在app.js设置。
+		</view>
+		<calendar date="2018-02"></calendar>
+	</view>
+	
+	
+	
+</view>

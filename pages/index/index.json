@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText":"小程序总结",
+    "usingComponents":{
+        "img-nav":"../components/imgNav/imgNav",
+        "top-nav":"../components/topNav/topNav",
+        "my-swiper":"../components/mySwiper/mySwiper",
+        "card-horizontal":"../components/card-horizontal/card-horizontal"
+    }
+}

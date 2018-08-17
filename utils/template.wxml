@@ -1,0 +1,81 @@
+
+<!--商品列表类型1,这是正常情况-->
+<template name="good-list-item">
+	<view class="good-list-item">
+		<image mode="widthFix" src="" class="card-img" src="./good1.jpg"></image>
+		<view class="card-content">
+			<view class="good-name-wrap">
+				<view class="good-name">保湿不脱色防水ins</view>
+				<view class="tuangou">可团购</view>
+			</view>
+			<view class="price">
+				<view class="price-tuangou">拼团价 : ￥256.00</view>
+				<view class="price-normal">
+					399.00
+					<view class="delete-line"></view>
+				</view>
+			</view>
+			<view class="desc">
+				丽扬大理石口红持久保湿不脱色防水ins超火唇膏
+			</view>
+			<view class="btnwrap">
+				<view class="pintuan">立即拼团</view>
+				<image src="./shopping-cart.jpg" class="shopping-cart" mode="widthFix"></image>
+			</view>
+		</view>
+	</view>
+</template>
+
+<!--商品列表类型2，这个高度更小-->
+<template name="good-list-item-short">
+	<view class="good-list-item-short">
+		<view class="good-list-item-short">
+			<image src="./good1.jpg" class="card-img" mode="widthFix"></image>
+			<view class="shodow">
+				<view class="timeLimit">
+					<view class="timeLimit-title">ALDI海外旗舰店</view>
+					<view class="timeLimit-subtitle">ALDI海外旗舰店</view>
+					<view class="timeLimit-btn">限时特价</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<!--top-nav 无滑动-->
+<template name="not-scroll">
+	<view class="not-scroll" style="background-color:{{styleData.wrap.backgroundColor}}">
+		<view bindtap="nav_click" data-index="{{index}}" wx:for="{{listData}}" url="{{item.url}}" class="top-nav-item"  wx:key="listData" style="padding:{{styleData.item.padding}};font-size:{{styleData.item.fontSize}};color:{{styleData.item.color}};height:{{styleData.item.height}};line-height:{{styleData.item.height}}">
+			<text style="color:{{activeIndex == index?styleData.active.color:''}}">{{item.text}}</text>
+			<view wx:if="{{activeIndex == index && styleData.line}}" class="line-bottom" style="height:{{styleData.line.height}};bottom:{{styleData.line.bottom}};background-color:{{styleData.line.backgroundColor}};"></view>
+		</view>
+	</view>
+</template>
+
+
+<!--top-nav 滑动-->
+<template name="scroll">
+	<scroll-view scroll-x class="scroll" style="background-color:{{styleData.wrap.backgroundColor}}">
+		<view bindtap="nav_click" data-index="{{index}}"  url="{{item.url}}" class="top-nav-item" wx:for="{{listData}}" wx:key="listData" style="padding:{{styleData.item.padding}};font-size:{{styleData.item.fontSize}};color:{{styleData.item.color}};height:{{styleData.item.height}};line-height:{{styleData.item.height}}">
+			<view class="top-nav-content" style="line-height:{{styleData.item.height}}">
+				<text style="color:{{activeIndex == index?styleData.active.color:''}}">{{item.text}}</text>
+				<view wx:if="{{activeIndex == index}}" class="line-bottom" style="height:{{styleData.line.height}};bottom:{{styleData.line.bottom}};background-color:{{styleData.line.backgroundColor}};"></view>
+			</view>
+		</view>
+	</scroll-view>
+</template>
+
+
+<!--例子所用的公共模板-->
+
+<template name="card-content">
+	<view class="name" >{{item.name}}</view>
+	<view class="native-place">{{item.nativePlace}}</view>
+</template>
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+<view class="imgNav clear" wx:if="{{width}}" style="padding:{{styleData.padding}}">
+	<navigator hover-class="none" url="{{item.url}}" class="img-nav-item" style="width:{{width}};margin-bottom:{{styleData.marginBottom}}rpx;" wx:for="{{listData}}" wx:key="listData">
+		<view class="img-wrap" style="height:{{styleData.height}}rpx;">
+			<image src="{{item.src}}" wx:if="{{!styleData.same}}" class="img-nav-img" style="width:{{item.width}}rpx;height:{{item.height}}rpx;margin-top:{{item.marginTop}}rpx"></image>
+			<image src="{{imgThis}}nav1.jpg" wx:if="{{styleData.same}}" class="img-nav-img" style="width:{{item.width}}rpx;height:{{item.height}}rpx"></image>
+		</view>
+		<view class="img-nav-text" style="color:{{styleData.text.color}};font-size:{{styleData.text.fontSize}}rpx;">{{item.text}}</view>
+	</navigator>
+</view>

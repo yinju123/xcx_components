@@ -1,0 +1,5 @@
+<view class="top-nav">
+	<import src="/utils/template.wxml"/>
+	<template wx:if="{{type==0}}" is="not-scroll" data="{{styleData,listData,activeIndex}}"></template>
+	<template wx:if="{{type==1}}" is="scroll" data="{{styleData,listData,activeIndex}}"></template>
+</view>

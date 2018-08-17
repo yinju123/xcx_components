@@ -1,0 +1,164 @@
+.clear:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.good-list-item,.good-list-item-short{
+    margin-bottom:13rpx;
+    border-radius:8px;
+    box-shadow:0px 3px 0px rgba(102,184,61,0.2);
+    background-color:#fff;
+    overflow:hidden;
+}
+
+.card-img{
+    width:100%;
+}
+
+.card-content{
+    padding:15rpx 16rpx;
+}
+
+.good-name-wrap{
+    display:flex;
+    height:25rpx;
+    margin-bottom:14rpx;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.good-name{
+    font-size:24rpx;
+}
+
+.tuangou{
+    width:74rpx;
+    height:25rpx;
+    line-height:25rpx;
+    text-align:center;
+    color:#fff;
+    background-color:#FFB302;
+    border-radius:6rpx;
+    font-size:20rpx;
+}
+
+.price{
+    height:20rpx;
+    line-height:20rpx;
+    padding-bottom:14rpx;
+    border-bottom:1px dotted #DCDCDC;
+}
+
+.price-tuangou{
+    float:left;
+    padding-right:15rpx;
+    color:#66B83D;
+    font-size:20rpx;
+    border-right:1px solid #C9C9C9;
+}
+
+.price-normal{
+    position:relative;
+    float:left;
+    margin-left:27rpx;
+    font-size:20rpx;
+    color:#CDCDCD;
+}
+
+.delete-line{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:95rpx;
+    height:1px;
+    background-color:#CDCDCD;
+    margin-left:-47rpx;
+}
+
+.desc{
+    margin-top:8rpx;
+    line-height:24rpx;
+    font-size:20rpx;
+}
+
+.btnwrap{
+    display:flex;
+    height:38rpx;
+    margin-top:18rpx;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.pintuan{
+    width:186rpx;
+    height:38rpx;
+    text-align:center;
+    line-height:38rpx;
+    color:#fff;
+    background-color:#66B83D;
+    font-size:20rpx;
+    border-radius:19rpx;
+}
+
+.shopping-cart{
+    width:36rpx;
+    height:32rpx;
+}
+
+/*card2*/
+
+.good-list-item-short{
+    position:relative;
+    height:421rpx;
+    overflow:hidden;
+}
+
+.card2 .card-img{
+    width:100%;
+}
+
+.shodow{
+    display:flex;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    align-items:center;
+    background-color:rgba(0,0,0,.2);
+}
+
+.timeLimit{
+    width:100%;
+}
+
+.timeLimit-title{
+    color:#fff;
+    font-size:24rpx;
+    text-align:center;
+}
+
+.timeLimit-subtitle{
+    margin:11rpx 0 17rpx;
+    color:#fff;
+    font-size:32rpx;
+    text-align:center;
+}
+
+.timeLimit-btn{
+    width:111rpx;
+    height:35rpx;
+    margin:0 auto;
+    background-color:#FFB302;
+    font-size:20rpx;
+    line-height:35rpx;
+    border-radius:6rpx;
+    text-align:center;
+    color:#fff;
+}
+
+
+
+
+

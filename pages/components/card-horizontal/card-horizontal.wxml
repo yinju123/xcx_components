@@ -1,0 +1,15 @@
+<view class="card-horizontal">
+	<import src="/utils/template.wxml"/>
+	
+	<block wx:for="{{listData}}" wx:key="listData">
+		<view class="card-horizontal-item" style="padding:{{styleData.item.padding}};margin-bottom:{{styleData.item.marginBottom}};box-shadow:{{styleData.item.boxShadow}};border-radius:{{styleData.item.borderRadius}}">
+			<view class="card-img-wrap" style="width:{{styleData.img.width}}rpx;height:{{styleData.img.height}}rpx;border-radius:{{styleData.img.borderRadius}};margin-right:{{styleData.img.marginRight}}rpx">
+				<image src="{{item.imgSrc}}" class="card-img" mode="widthFix"></image>
+			</view>
+			<view class="card-content">
+				<template is="card-content" data="{{item}}"></template>
+			</view>
+		</view>
+	</block>
+	
+</view>

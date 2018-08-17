@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "goods-list": "../components/goods-list/goods-list",
+        "top-nav": "../components/topNav/topNav",
+        "calendar":"../components/calendar/calendar",
+        "swiper-three-dimensional":"../components/swiper-three-dimensional/swiper-three-dimensional"
+    }
+}

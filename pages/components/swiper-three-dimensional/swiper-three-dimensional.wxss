@@ -1,0 +1,40 @@
+
+.swiper-three-dimensional{
+    position:relative;
+    transform-style: preserve-3d;
+    perspective: 2400rpx;
+    height:906rpx;
+}
+
+.swiper-item{
+    position:absolute;
+    top:0;
+    left:50%;
+    width:520rpx;
+    height:906rpx;
+    text-align:center;
+    line-height:906rpx;
+    color:#fff;
+    font-size:40rpx;
+    margin-left:-260rpx;
+    transform:translate3d(0,0,-2400rpx) rotateY(0);
+    transition:1s;
+    box-shadow:0 5px 10rpx rgba(0,0,0,.3);
+    border-radius:12rpx;
+    background-color:red;
+}
+
+.swiper-prev{
+    transform-origin:left;
+    transform:translate3d(-120rpx,0,-400rpx) rotateY(45deg);
+}
+
+.swiper-current{
+    transform-origin:left;
+    transform:translate3d(0,0,0) rotateY(0deg);
+}
+
+.swiper-next{
+    transform-origin:right;
+    transform:translate3d(120rpx,0,-400rpx) rotateY(-45deg);
+}

@@ -1,0 +1,80 @@
+
+Component({
+	properties:{
+		styleData:{
+			type:'Object',
+			value:{
+				//大背景颜色
+				wrap:{
+					backgroundColor:'#66B83D'
+				},
+				//每一项的样式
+				item:{
+					padding:'0 20rpx',
+					height:'94rpx',
+					fontSize:'26rpx',
+					color:'#fff'
+				},
+				//下边横线的样式
+				line:{
+					height:'4rpx',
+					bottom:'10rpx',
+					backgroundColor:'#fff'
+				},
+				//活动项的字体的颜色
+				active:{
+					color:''
+				}
+			},
+		},
+		//导航栏类型，是第几种类型的跳转。0没滑动，1滑动,
+		type:{
+			type:'Number',
+			value:0
+		},
+		//没有url参数时，返回对应的下标
+		listData:{
+			type:'Array',
+			value:[
+				{
+					text:'第一页',
+					url:'../index/index'
+				},
+				{
+					text:'第二页',
+					url:'../second/second'
+				},
+				{
+					text:'第三页',
+					url:'../three/three'
+				},
+			]
+		},
+		activeIndex:{
+			type:'Number',
+			value:0
+		}
+	},
+	data:{
+		value:['资讯','故事','健康树','私人医生','大讲堂','医生']
+	},
+	methods:{
+		nav_click(e){
+			var index = e.currentTarget.dataset.index;
+			var listData = this.data.listData;
+			if(listData[index].url){
+				wx.navigateTo({
+					url:listData[index].url
+				})
+			}else{
+				this.triggerEvent('get_nav_index',index)
+			}
+			
+			this.setData({
+				activeIndex:index
+			})
+		}
+	}
+	
+})
+

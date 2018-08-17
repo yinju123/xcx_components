@@ -1,0 +1,41 @@
+
+
+.card-horizontal-item{
+    display:flex;
+    align-items:center;
+    background-color:#fff;
+    /*padding:20rpx 10rpx;*/
+    /*border-radius:10rpx;*/
+}
+
+.card-img-wrap{
+    /*width:271rpx;*/
+    /*height:184rpx;*/
+    /*margin-right:30rpx;*/
+    overflow:hidden;
+}
+
+.card-img-wrap image{
+    width:100%;
+}
+
+.card-content{
+    flex:1;
+    min-width:0;
+}
+
+/*这是card-content模板一*/
+
+.name{
+    font-size:30rpx;
+    margin-bottom:30rpx;
+}
+
+.native-place{
+    font-size:26rpx;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+

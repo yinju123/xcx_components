@@ -1,0 +1,18 @@
+.clear::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.imgNav{
+    background-color:#fff;
+}
+
+.img-nav-item{
+    float:left;
+    text-align:center;
+}
+
+.img-wrap{
+    font-size:0;
+}

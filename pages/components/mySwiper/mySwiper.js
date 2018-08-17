@@ -1,0 +1,50 @@
+Component({
+	properties:{
+		styleData:{
+			type:'Object',
+			value:{
+				//轮播图高度
+				swiperHeight:404,
+				//是否有
+				
+			}
+		},
+		listData:{
+			type:'Array',
+			value:[
+				{
+					imgSrc:'./img/1.png',
+					url:'../index/index'
+					
+				},
+				{
+					imgSrc:'./img/1.png',
+					url:'../index/index'
+				},
+				{
+					imgSrc:'./img/1.png',
+					url:'../index/index'
+				},
+			]
+		}
+	},
+	data:{
+		//当前活动项
+		activeIndex:0,
+	},
+	methods:{
+		toDots(e){
+			var index = e.currentTarget.dataset.index;
+			this.setData({
+				activeIndex:index
+			})
+		},
+		swiperChange(e){
+			if(e.detail.source == "touch"){
+				this.setData({
+					activeIndex:e.detail.current
+				})
+			}
+		}
+	},
+})

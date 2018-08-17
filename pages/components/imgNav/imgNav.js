@@ -1,0 +1,128 @@
+var utils = require('../../../utils/utils');
+
+
+Component({
+	
+	properties:{
+		//样式数据
+		styleData:{
+			type:'Object',
+			value:{
+				//文字顶部到图片顶部的距离
+				height:110,
+				//文字样式
+				text:{
+					fontSize:24,
+					color:'#000000',
+				},
+				//最外层标签的padding
+				padding:'20rpx 0 30rpx',
+				//每行之间的距离
+				marginBottom:20,
+				//有多少行
+				row:4,
+				//每个图片是否大小一样
+				same:false,
+				//图片的大小
+				img:[
+					{
+						width:92,
+						height:92,
+						marginTop:''
+					},
+					{
+						width:80,
+						height:80,
+					},
+					{
+						width:92,
+						height:92,
+						//图片上移的大小
+						marginTop:-20
+					},
+					{
+						width:92,
+						height:92,
+					},
+					{
+						width:92,
+						height:92,
+					},
+					{
+						width:92,
+						height:92,
+					},
+				]
+			},
+		},
+		//内容数据
+		
+		listData:{
+			type:'Array',
+			value:[
+				{
+					//链接地址
+					url:'../index/index',
+					//文字内容
+					text:'商城',
+					src:'/utils/img/imgNav/nav1.jpg',
+					width:92,
+					height:92,
+				},
+				{
+					url:'../index/index',
+					text:'商城',
+					src:'/utils/img/imgNav/nav1.jpg',
+					width:80,
+					height:80,
+				},
+				{
+					url:'../index/index',
+					text:'商城',
+					src:'/utils/img/imgNav/nav1.jpg',
+					width:92,
+					height:92,
+					//图片上移的大小
+					marginTop:-20
+				},
+				{
+					url:'../index/index',
+					text:'商城',
+					src:'/utils/img/imgNav/nav1.jpg',
+					width:92,
+					height:92,
+					//图片上移的大小
+				},
+				{
+					url:'../index/index',
+					text:'商城',
+					src:'/utils/img/imgNav/nav1.jpg',
+					width:92,
+					height:92,
+					//图片上移的大小
+				},
+			]
+		}
+	},
+	
+	
+	data:{
+		imgThis:'/utils/img/imgNav/',
+		imgCommon:'utils/img/common/',
+		width:'25%',
+	},
+	attached(){
+		this.getWidth();
+	},
+	methods:{
+		//计算宽度
+		getWidth(){
+			this.setData({
+				width:(1/this.data.styleData.row)*100+'%'
+			})
+		}
+	}
+})
+
+
+
