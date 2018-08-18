@@ -1,0 +1,3 @@
+<view class="get_phone_code {{class}}" bindtap="get_code">
+	{{get_code_btn_text}}
+</view>

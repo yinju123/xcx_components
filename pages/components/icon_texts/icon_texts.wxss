@@ -1,0 +1,39 @@
+@import '/app.wxss';
+
+
+.icon_texts{
+    background-color:#ddd;
+}
+
+/*.icon_texts{*/
+/*height:36rpx;*/
+/*padding-top:16rpx;*/
+/*}*/
+
+/*.icon_texts .icon_box{*/
+/*margin-right:18rpx;*/
+/*}*/
+
+/*.icon_texts .text_box{*/
+/*color:#55585A;*/
+/*font-size:28rpx;*/
+/*}*/
+
+/*.repair .icon_box{*/
+/*width:35rpx;*/
+/*height:35rpx;*/
+/*}*/
+
+/*.collect .icon_box{*/
+/*width:37rpx;*/
+/*height:35rpx;*/
+/*}*/
+
+/*.share{*/
+/*background-color:transparent;*/
+/*}*/
+
+/*.share .icon_box{*/
+/*width:36rpx;*/
+/*height:36rpx;*/
+/*}*/

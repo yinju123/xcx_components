@@ -1,5 +1,6 @@
 var app = getApp();
 var utils = require('../../utils/utils');
+import upload_img from '../../assets/yinju/img/add/index'
 
 Page({
 	data:{
@@ -110,7 +111,48 @@ Page({
 				height:46,
 			},
 		],
-		location:''
+		location:'',
+		upload_img:{
+			list_data:{
+				upload_img:{
+					padding:'0 48rpx;',
+					margin_right:-13,
+				},
+				//每一项的内容
+				upload_img_item:{
+					width:210,
+					height:242,
+					margin:'0 13rpx 13rpx 0'
+				},
+				//里面的图标
+				icon_box:{
+					width:66,
+					height:66,
+					src:upload_img.icon_add
+				},
+				text_box:{
+					margin_top:26,
+					font_size:24,
+					color:'#A2A2A3',
+					text:'上传'
+				},
+				delete:{
+					width:33,
+					src:upload_img.icon_delete,
+					top:-9,
+					right:-8,
+				},
+				//可上传的最大数
+				count:9
+			},
+			imgs:[
+				upload_img.local_img_1,
+				"",
+				"",
+				"",
+				"",
+			],
+		}
 		
 	},
 	onLoad(){

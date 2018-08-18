@@ -163,6 +163,24 @@ var utils = {
 				}
 			}
 		}
+	},
+	//str,要匹配的字符串
+	//type 匹配的类型 1 手机号 2 身份证号，3 邮箱号
+	match(str,type){
+		var reg = '';
+		switch (type){
+			case 1:
+				reg = /^1[3|4|5|7|8][0-9]{9}$/;
+				break;
+			case 2:
+				reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+				break;
+			case 3:
+				reg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+				break;
+		}
+		
+		return reg.test(str);
 	}
 	
 }

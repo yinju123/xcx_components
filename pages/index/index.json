@@ -4,6 +4,7 @@
         "img-nav":"../components/imgNav/imgNav",
         "top-nav":"../components/topNav/topNav",
         "my-swiper":"../components/mySwiper/mySwiper",
-        "card-horizontal":"../components/card-horizontal/card-horizontal"
+        "card-horizontal":"../components/card-horizontal/card-horizontal",
+        "upload_img":"/pages/components/upload_img/upload_img"
     }
 }

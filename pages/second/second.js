@@ -1,14 +1,50 @@
 var app = getApp();
-
-
+import icon_texts_img from '../../assets/yinju/img/detail/index';
+import utils from '../../utils/utils'
 Page({
 	data:{
 		height:'',
 		topNavActiveIndex:1,
+		icon_texts_img,
+		icon_texts:{
+			style_data:{
+				icon_texts:{
+					height:36,
+					padding:'16rpx 0'
+				},
+				text_box:{
+					color:'#55585A',
+					font_size:28,
+					margin_left:18,
+				},
+			},
+			list_data:[
+				{
+					width:35,
+					height:35,
+					src:icon_texts_img.repair,
+					text:'报修'
+				},
+				{
+					width:37,
+					height:37,
+					src:icon_texts_img.collect,
+					text:'收藏',
+					item_width:140,
+				},
+				{
+					width:36,
+					height:36,
+					src:icon_texts_img.share,
+					text:'分享'
+				},
+			]
+		},
+		data:''
 	},
 	onLoad(){
 		this.setData({
 			height:app.data.height,
 		})
-	}
+	},
 })

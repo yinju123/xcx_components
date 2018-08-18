@@ -1,7 +1,7 @@
 Component({
 	data:{
 		swiperClass:[],
-		//开始的位置
+		//手触碰屏幕，开始滑动的位置
 		start:'',
 		page:-1,
 		//数据是否加载完毕
@@ -9,12 +9,10 @@ Component({
 		//中间卡片的index
 		currentIndex:1,
 		//0为请求数据类型，1，为不请求数据类型，无缝循环加载
-		type:1,
-		
-		
-		
-		
+		type:0,
 		listData:['','','','',''],
+		//当数量过多时，渲染就会有很大的问题，所以只能在currentIndex+can_show与currentIndex-can_show之间的才显示
+		can_show:2,
 		// listData:[],
 	},
 	
@@ -138,7 +136,7 @@ Component({
 						})
 						return;
 					}
-					
+					//这里是我自己测试的，当所有数据请求完成的记过
 					if(page>0){
 						This.setData({
 							end:true

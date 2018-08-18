@@ -1,0 +1,37 @@
+<view class="upload_img clear {{class}}" style="padding:{{list_data.upload_img.padding}};margin-right:{{list_data.upload_img.margin_right}}rpx">
+	<view class="upload_img_item" wx:if="{{item}}" wx:for="{{imgs}}" wx:key="{{index}}" style="width:{{list_data.upload_img_item.width}}rpx;height:{{list_data.upload_img_item.height}}rpx;margin:{{list_data.upload_img_item.margin}}">
+		
+		<!--展示本地图片-->
+		<view class="local_img" wx:if="{{item}}">
+			<image src="{{item}}" mode="aspectFill"></image>
+		</view>
+		
+		
+		<!--删除按钮-->
+		<view  catchtap="delete" data-index="{{index}}" class="delete" style="width:{{list_data.delete.width}}rpx;top:{{list_data.delete.top}}rpx;right:{{list_data.delete.right}}rpx;">
+			<image mode="widthFix" src="{{list_data.delete.src}}"></image>
+		</view>
+		
+		
+		
+	</view>
+	
+	
+	
+	
+	
+	
+	
+	
+	<view class="upload_img_item" style="width:{{list_data.upload_img_item.width}}rpx;height:{{list_data.upload_img_item.height}}rpx;margin:{{list_data.upload_img_item.margin}}" bindtap="choose_img">
+		
+		<!--没图片显示的内容-->
+		<view class="upload_img__item_content" >
+			<view class="icon_box" style="width:{{list_data.icon_box.height}}rpx;height:{{list_data.icon_box.height}}rpx;">
+				<image src="{{list_data.icon_box.src}}"></image>
+			</view>
+			<view wx:if="{{list_data.text_box}}" class="text_box" style="color:{{list_data.text_box.color}};margin-top:{{list_data.text_box.margin_top}}rpx;font-size:{{list_data.text_box.font_size}}rpx;" >{{list_data.text_box.text}}</view>
+		</view>
+		
+	</view>
+</view>

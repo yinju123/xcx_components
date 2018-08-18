@@ -1,4 +1,5 @@
 <view class="second container" style="min-height:{{height}}px">
+	
 	<view class="top-nav-wrap">
 		<top-nav activeIndex="{{topNavActiveIndex}}"></top-nav>
 	</view>
@@ -19,9 +20,15 @@
 		<view class="desc">
 			如果传入date（时间,字符串，例如：2018-02），就是显示这个月的时间。如果没传就是本月的时间。点击可以选择时间，并在app.js设置。
 		</view>
-		<calendar date="2018-02"></calendar>
+		<calendar date="{{data}}"></calendar>
 	</view>
 	
-	
+	<view class="template-item">
+		<view class="template-item-title">icon_texts</view>
+		<view class="desc">
+		
+		</view>
+		<icon_texts style_data="{{icon_texts.style_data}}" list_data="{{icon_texts.list_data}}"></icon_texts>
+	</view>
 	
 </view>

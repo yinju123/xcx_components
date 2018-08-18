@@ -3,23 +3,27 @@
 		<top-nav></top-nav>
 	</view>
 	
-	
+	<!--图片文字导航-->
 	<view class="template-item">
 		<view class=".template-item-title">图片文字导航</view>
 		<view class="desc">这是图片与文字的导航。一般是在页面的上部分。但底部的导航栏也是这样的模式。底部导航栏的中间的哪一样可能会没文字，且图片较其他的大。这事就用margin调整图片的位置</view>
 		<img-nav></img-nav>
 	</view>
+	
+	<!--文字导航-->
 	<view class="template-item">
 		<view class="template-item-title">文字导航</view>
 		<view class="desc">在topNav中有默认的情况，不传数据。就是使用默认的。当与默认的不一致时，在传数据。数据有三种。1、listData 导航的文字及导航的地址。2、styleData 导航的样式。 3、activeIndex 当前是哪一样页面 4、type 使用哪种类型的导航栏</view>
 		<top-nav type="{{type2}}" bindget_nav_index="get_nav_index" styleData="{{styleData2}}" listData="{{listData2}}"></top-nav>
 	</view>
 	
+	<!--轮播图-->
 	<view class="template-item">
 		<view class="template-item-title">轮播图</view>
 		<my-swiper></my-swiper>
 	</view>
 	
+	<!--图片文字导航2-->
 	<view class="template-item">
 		<view class="footer-wrap">
 			<img-nav styleData="{{styleData}}" listData="{{listData}}"></img-nav>
@@ -42,9 +46,7 @@
 		</view>
 		<view class="card-wrap">
 			<card-horizontal>
-				<!--<image slot="img" src="/utils/img/card-horizontal/1.jpg" class="card-img" mode="widthFix"></image>-->
-				<!--<view class="name" slot="card-content">yinju</view>-->
-				<!--<view class="native-place" slot="card-content">江西景德镇人1111111111111111111111111111222222222</view>-->
+			
 			</card-horizontal>
 		</view>
 	</view>
@@ -61,6 +63,16 @@
 			<view class="b">B</view>
 			<view class="c">C</view>
 		</scroll-view>
+	</view>
+	
+	<view class="template-item">
+		<view class="template-item-title">card-horizontal</view>
+		<view class="desc">
+		
+		</view>
+		<view class="card-wrap">
+			<upload_img list_data="{{upload_img.list_data}}" imgs="{{upload_img.imgs}}"></upload_img>
+		</view>
 	</view>
 	
 	

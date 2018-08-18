@@ -1,0 +1,8 @@
+<view class="icon_texts space_around" style="height:{{style_data.icon_texts.height}}rpx;padding:{{style_data.icon_texts.padding}}">
+	<view class="items align_items" wx:for="{{list_data}}" wx:key="index" bindtap="change" style="width:{{item.item_width}}rpx">
+		<view class="icon_box" style="width:{{item.width}}rpx;height:{{item.height}}rpx">
+			<image src="{{item.src}}"></image>
+		</view>
+		<view class="text_box" style="color:{{style_data.text_box.color}};font-size:{{style_data.text_box.font_size}}rpx;margin-left:{{style_data.text_box.margin_left}}rpx;">{{item.text}}</view>
+	</view>
+</view>
